@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard · Talents Unlocked</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body class="auth-page" data-page="dashboard" data-auth="user">
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="/#courses">Courses</a>
+                <a href="/#why">Why us</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-primary btn-sm" href="/dashboard.html" data-auth-show="user">My dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main" id="main">
+        <section class="layout">
+            <div class="form-panel">
+                <div class="form-content">
+                    <p class="eyebrow">YOUR DASHBOARD</p>
+                    <h1>Welcome back, <span id="user-first-name">there</span>!</h1>
+                    <p class="subtitle">What would you like to do today?</p>
+                    <div class="account-card">
+                        <span class="avatar" id="user-avatar" aria-hidden="true">U</span>
+                        <div>
+                            <strong id="user-name">User</strong>
+                            <p id="user-email">user@example.com</p>
+                        </div>
+                    </div>
+                    <p class="dashboard-copy">You're all signed in. This is your starting space on Talents Unlocked.</p>
+                    <div class="dashboard-actions">
+                        <a class="btn btn-primary" id="browse-courses" href="/#courses">Browse courses <span aria-hidden="true">→</span></a>
+                    </div>
+                    <form id="logout-form">
+                        <button class="secondary" id="logout-button" type="submit">Log Out <span aria-hidden="true">→</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <span>Learn anything, at your own pace.</span>
+        </div>
+    </footer>
+
+    <script src="/app.js?v=5"></script>
+</body>
+</html>

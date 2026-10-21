@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In · Talents Unlocked</title>
+    <meta name="description" content="Log in to your Talents Unlocked account.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body class="auth-page" data-page="login" data-auth="guest">
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="/#courses">Courses</a>
+                <a href="/#why">Why us</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost btn-sm" href="/login.html" data-auth-show="guest">Log in</a>
+                <a class="btn btn-primary btn-sm" href="/signup.html" data-auth-show="guest">Join for free</a>
+                <a class="btn btn-primary btn-sm" href="/dashboard.html" data-auth-show="user">My dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main" id="main">
+        <section class="layout">
+            <div class="form-panel">
+                <div class="form-content">
+                    <p class="eyebrow">GOOD TO SEE YOU</p>
+                    <h1>Pick up where you left off.</h1>
+                    <p class="subtitle">Log in to your Talents Unlocked account.</p>
+                    <div id="notice-box" aria-live="polite"></div>
+                    <form id="login-form">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Your password" maxlength="128" required>
+                        <div class="forgot-link"><a href="/forgot-password.html">Forgot Password?</a></div>
+                        <button id="login-submit" type="submit">Log In <span aria-hidden="true">↗</span></button>
+                    </form>
+                    <p class="switch-page">New here? <a href="/signup.html">Sign Up</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <span>Learn anything, at your own pace.</span>
+        </div>
+    </footer>
+
+    <script src="/app.js?v=5"></script>
+</body>
+</html>

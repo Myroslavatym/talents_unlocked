@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Log In{% endblock %}
+{% block description %}Log in to your Talents Unlocked account.{% endblock %}
+{% block content %}
+<p class="eyebrow">GOOD TO SEE YOU</p>
+<h1>Pick up where you left off.</h1>
+<p class="subtitle">Log in to your Talents Unlocked account.</p>
+{% if error %}<p class="notice error" role="alert">{{ error }}</p>{% endif %}
+{% if message %}<p class="notice" role="status">{{ message }}</p>{% endif %}
+<form id="login-form" action="/login" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" value="{{ email or '' }}" maxlength="{{ limits.email_max }}" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Your password" maxlength="{{ limits.password_max }}" required>
+    <div class="forgot-link"><a href="/forgot-password">Forgot Password?</a></div>
+    <button id="login-submit" type="submit">Log In <span aria-hidden="true">↗</span></button>
+</form>
+<p class="switch-page">New here? <a href="/signup">Sign Up</a></p>
+{% endblock %}

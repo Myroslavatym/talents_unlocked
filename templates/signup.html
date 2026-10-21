@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block description %}Create your free Talents Unlocked account and start learning today.{% endblock %}
+{% block content %}
+<p class="eyebrow">LET'S GET STARTED</p>
+<h1>Create your account</h1>
+<p class="subtitle">Your next chapter starts right here.</p>
+<div id="notice-box" aria-live="polite">{% if error %}<p class="notice error" role="alert">{{ error }}</p>{% endif %}</div>
+<form id="signup-form" action="/signup" method="post" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="field{% if errors.name %} has-error{% endif %}">
+        <label for="name">Full name</label>
+        <input id="name" name="name" autocomplete="name" placeholder="Your name" value="{{ name or '' }}" maxlength="{{ limits.name_max }}" required aria-describedby="name-error"{% if errors.name %} aria-invalid="true"{% endif %}>
+        <p class="field-error" id="name-error">{{ errors.name or '' }}</p>
+    </div>
+    <div class="field{% if errors.email %} has-error{% endif %}">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" value="{{ email or '' }}" maxlength="{{ limits.email_max }}" required aria-describedby="email-error"{% if errors.email %} aria-invalid="true"{% endif %}>
+        <p class="field-error" id="email-error">{{ errors.email or '' }}</p>
+    </div>
+    <div class="field{% if errors.password %} has-error{% endif %}">
+        <label for="password">Password</label>
+        <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" minlength="{{ limits.password_min }}" maxlength="{{ limits.password_max }}" required aria-describedby="password-requirements password-error"{% if errors.password %} aria-invalid="true"{% endif %}>
+            <button class="toggle-password" id="toggle-password" type="button" aria-controls="password" aria-label="Show password" aria-pressed="false">Show</button>
+        </div>
+        <div class="strength" data-score="0" aria-hidden="true">
+            <span class="strength-bar"><span></span><span></span><span></span><span></span></span>
+            <span class="strength-label"></span>
+        </div>
+        <ul class="requirements" id="password-requirements">
+            <li data-rule="length">At least {{ limits.password_min }} characters</li>
+            <li data-rule="lower">One lowercase letter</li>
+            <li data-rule="upper">One uppercase letter</li>
+            <li data-rule="number">One number</li>
+        </ul>
+        <p class="field-error" id="password-error">{{ errors.password or '' }}</p>
+    </div>
+    <div class="field{% if errors.confirm_password %} has-error{% endif %}">
+        <label for="confirm_password">Confirm password</label>
+        <input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Repeat your password" maxlength="{{ limits.password_max }}" required aria-describedby="confirm_password-error"{% if errors.confirm_password %} aria-invalid="true"{% endif %}>
+        <p class="field-error" id="confirm_password-error">{{ errors.confirm_password or '' }}</p>
+    </div>
+    <button id="signup-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+</form>
+<p class="switch-page">Already have an account? <a href="/login">Log In</a></p>
+{% endblock %}
+{% block scripts %}<script src="/static/validation.js?v=5"></script>{% endblock %}

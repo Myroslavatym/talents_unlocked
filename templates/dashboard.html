@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<p class="eyebrow">YOUR DASHBOARD</p>
+<h1>Welcome back, {{ user.name.split(' ')[0] }}!</h1>
+<p class="subtitle">What would you like to do today?</p>
+<div class="account-card">
+    <span class="avatar" aria-hidden="true">{{ user.name[0] | upper }}</span>
+    <div><strong>{{ user.name }}</strong><p>{{ user.email }}</p></div>
+</div>
+<p class="dashboard-copy">You're all signed in. This is your starting space on Talents Unlocked.</p>
+<div class="dashboard-actions">
+    <a class="btn btn-primary" id="browse-courses" href="/#courses">Browse courses <span aria-hidden="true">→</span></a>
+</div>
+<form id="logout-form" action="/logout" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button class="secondary" id="logout-button" type="submit">Log Out <span aria-hidden="true">→</span></button>
+</form>
+{% endblock %}

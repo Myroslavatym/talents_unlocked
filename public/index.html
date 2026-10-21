@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn new skills online · Talents Unlocked</title>
+    <meta name="description" content="Talents Unlocked — free online courses in programming, design, data, maths, business and languages. Learn at your own pace.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body class="home-page" data-page="home" data-auth="guest">
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="/#courses">Courses</a>
+                <a href="/#why">Why us</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost btn-sm" href="/login.html" data-auth-show="guest">Log in</a>
+                <a class="btn btn-primary btn-sm" href="/signup.html" data-auth-show="guest">Join for free</a>
+                <a class="btn btn-primary btn-sm" href="/dashboard.html" data-auth-show="user">My dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="pill"><span class="pill-dot"></span>100% free · learn at your own pace</span>
+                    <h1>Unlock your talents.<br><span class="gradient-text">Learn anything.</span></h1>
+                    <p class="hero-lead">Bite-sized video lessons, hands-on practice and progress tracking — from coding and design to maths and languages.</p>
+                    <form class="hero-search" id="course-search-form" role="search">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M21 21l-4.35-4.35"/></svg>
+                        <label class="sr-only" for="course-search">Search courses</label>
+                        <input id="course-search" type="search" placeholder="What do you want to learn?" maxlength="60" autocomplete="off">
+                        <button class="btn btn-primary" id="course-search-button" type="submit">Search</button>
+                    </form>
+                    <ul class="hero-stats">
+                        <li><strong data-stat="courses">9</strong><span>courses</span></li>
+                        <li><strong data-stat="lessons">200+</strong><span>lessons</span></li>
+                        <li><strong data-stat="rating">4.7★</strong><span>average rating</span></li>
+                    </ul>
+                </div>
+                <div class="hero-visual">
+                    <img src="/img/hero.jpg" alt="A student learning online with a laptop, surrounded by lesson cards" width="1200" height="896">
+                    <div class="float-card float-card--a">
+                        <span class="badge-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+                        <span>Lesson completed<small>JavaScript Foundations</small></span>
+                    </div>
+                    <div class="float-card float-card--b">
+                        <span class="badge-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
+                        <span>7-day streak<small>Keep it going!</small></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="courses" aria-labelledby="courses-title">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow left">EXPLORE THE CATALOG</p>
+                    <h2 id="courses-title">Preview our courses</h2>
+                    <p class="section-sub">Pick a topic and see what you'll learn. Every course comes with a free preview.</p>
+                </div>
+                <p class="result-count" id="course-count" aria-live="polite"></p>
+            </div>
+            <div class="chips" id="category-chips" role="group" aria-label="Filter courses by category"></div>
+            <div class="course-grid" id="course-grid" data-signup-url="/signup.html" data-dashboard-url="/dashboard.html"></div>
+            <p class="empty-state" id="course-empty" hidden>No courses match your search. Try another keyword or category.</p>
+        </section>
+
+        <section class="section why" id="why" aria-labelledby="why-title">
+            <div class="why-head">
+                <p class="eyebrow">WHY TALENTS UNLOCKED</p>
+                <h2 id="why-title">Learning that fits your life</h2>
+                <p class="section-sub">Short lessons, real practice and a clear path forward — so you always know what to learn next.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature">
+                    <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 6v6l4 2"/></svg></span>
+                    <h3>Learn at your own pace</h3>
+                    <p>Lessons are 5–10 minutes long. Pause, rewind and come back whenever it suits you.</p>
+                </article>
+                <article class="feature">
+                    <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+                    <h3>Practice as you go</h3>
+                    <p>Quizzes and mini-projects after every module help new skills actually stick.</p>
+                </article>
+                <article class="feature">
+                    <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+                    <h3>Everything in one place</h3>
+                    <p>Your personal dashboard keeps your account and learning in one simple space.</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="cta-wrap">
+            <section class="cta-band" aria-labelledby="cta-title">
+                <div>
+                    <h2 id="cta-title">Ready to unlock your next skill?</h2>
+                    <p>Create a free account in less than a minute.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn btn-light btn-lg" href="/signup.html" data-auth-show="guest">Join for free</a>
+                    <a class="btn btn-outline-light btn-lg" href="/login.html" data-auth-show="guest">Log in</a>
+                    <a class="btn btn-light btn-lg" href="/dashboard.html" data-auth-show="user">Go to my dashboard</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <dialog class="course-modal" id="course-modal" aria-labelledby="modal-title">
+        <div class="modal-hero">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+            <div class="modal-icon"></div>
+            <p class="modal-category" id="modal-category"></p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-instructor"></p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-stats" id="modal-stats"></div>
+            <p id="modal-description"></p>
+            <h3>Skills you'll gain</h3>
+            <ul class="skills" id="modal-skills"></ul>
+            <h3>What's inside</h3>
+            <ol class="modules" id="modal-modules"></ol>
+            <div class="modal-actions">
+                <a class="btn btn-primary" id="modal-cta" href="/signup.html">Join for free to enroll</a>
+                <button class="btn btn-ghost" id="modal-cancel" type="button" data-close>Close</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <span>Learn anything, at your own pace.</span>
+        </div>
+    </footer>
+
+    <script src="/courses.js?v=5"></script>
+    <script src="/home.js?v=5"></script>
+    <script src="/app.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up · Talents Unlocked</title>
+    <meta name="description" content="Create your free Talents Unlocked account and start learning today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body class="auth-page" data-page="signup" data-auth="guest">
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="/#courses">Courses</a>
+                <a href="/#why">Why us</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-ghost btn-sm" href="/login.html" data-auth-show="guest">Log in</a>
+                <a class="btn btn-primary btn-sm" href="/signup.html" data-auth-show="guest">Join for free</a>
+                <a class="btn btn-primary btn-sm" href="/dashboard.html" data-auth-show="user">My dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main" id="main">
+        <section class="layout">
+            <div class="form-panel">
+                <div class="form-content">
+                    <p class="eyebrow">LET'S GET STARTED</p>
+                    <h1>Create your account</h1>
+                    <p class="subtitle">Your next chapter starts right here.</p>
+                    <div id="notice-box" aria-live="polite"></div>
+                    <form id="signup-form" novalidate>
+                        <div class="field">
+                            <label for="name">Full name</label>
+                            <input id="name" name="name" autocomplete="name" placeholder="Your name" maxlength="50" required aria-describedby="name-error">
+                            <p class="field-error" id="name-error"></p>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required aria-describedby="email-error">
+                            <p class="field-error" id="email-error"></p>
+                        </div>
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <div class="password-wrap">
+                                <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" minlength="8" maxlength="128" required aria-describedby="password-requirements password-error">
+                                <button class="toggle-password" id="toggle-password" type="button" aria-controls="password" aria-label="Show password" aria-pressed="false">Show</button>
+                            </div>
+                            <div class="strength" data-score="0" aria-hidden="true">
+                                <span class="strength-bar"><span></span><span></span><span></span><span></span></span>
+                                <span class="strength-label"></span>
+                            </div>
+                            <ul class="requirements" id="password-requirements">
+                                <li data-rule="length">At least 8 characters</li>
+                                <li data-rule="lower">One lowercase letter</li>
+                                <li data-rule="upper">One uppercase letter</li>
+                                <li data-rule="number">One number</li>
+                            </ul>
+                            <p class="field-error" id="password-error"></p>
+                        </div>
+                        <div class="field">
+                            <label for="confirm_password">Confirm password</label>
+                            <input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" placeholder="Repeat your password" maxlength="128" required aria-describedby="confirm_password-error">
+                            <p class="field-error" id="confirm_password-error"></p>
+                        </div>
+                        <button id="signup-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+                    </form>
+                    <p class="switch-page">Already have an account? <a href="/login.html">Log In</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <span>Learn anything, at your own pace.</span>
+        </div>
+    </footer>
+
+    <script src="/validation.js?v=5"></script>
+    <script src="/app.js?v=5"></script>
+</body>
+</html>

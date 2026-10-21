@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} · Talents Unlocked</title>
+    <meta name="description" content="{% block description %}Talents Unlocked — free online courses in programming, design, data, maths, business and languages. Learn at your own pace.{% endblock %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="/static/style.css?v=5">
+</head>
+<body class="{% block body_class %}auth-page{% endblock %}" data-auth="{{ 'user' if logged_in else 'guest' }}">
+    {% include "_nav.html" %}
+    {% block body %}
+    <main class="auth-main" id="main">
+        <section class="layout">
+            <div class="form-panel">
+                <div class="form-content">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </section>
+    </main>
+    {% endblock %}
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <span>Learn anything, at your own pace.</span>
+        </div>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
