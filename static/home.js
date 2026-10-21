@@ -208,6 +208,24 @@
         statRating.textContent = avg.toFixed(1) + '★';
     }
 
+    // Tabs (Watch, Practice, Track)
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = Array.from(document.querySelectorAll('.tab-panel'));
+    if (tabs.length && panels.length) {
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach((t) => {
+                    t.setAttribute('aria-selected', String(t === tab));
+                    t.setAttribute('tabindex', t === tab ? '0' : '-1');
+                });
+                const targetId = tab.getAttribute('aria-controls');
+                panels.forEach((p) => {
+                    p.hidden = p.id !== targetId;
+                });
+            });
+        });
+    }
+
     renderChips();
     renderCourses();
 })();

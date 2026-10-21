@@ -4,34 +4,168 @@
 {% block body %}
 <main id="main">
     <section class="hero">
+        <svg class="bunting bunting-left" viewBox="0 0 260 110" aria-hidden="true">
+            <path d="M-10 6 Q130 100 270 6" fill="none" stroke="#1b1f5e" stroke-width="3"/>
+            <g>
+                <polygon class="flag" points="14,20 40,25 25,48" fill="#5a4ff3"/>
+                <circle class="flag" cx="66" cy="52" r="10" fill="#ffb800"/>
+                <polygon class="flag" points="100,56 126,58 113,82" fill="#1fab54"/>
+                <polygon class="flag" points="157,60 170,67 166,82 150,83 146,68" fill="#ff6b35"/>
+                <circle class="flag" cx="204" cy="48" r="10" fill="#f8a5d1"/>
+                <polygon class="flag" points="232,26 256,20 247,46" fill="#5a4ff3"/>
+            </g>
+        </svg>
+        <svg class="bunting bunting-right" viewBox="0 0 260 110" aria-hidden="true">
+            <path d="M-10 6 Q130 100 270 6" fill="none" stroke="#1b1f5e" stroke-width="3"/>
+            <g>
+                <polygon class="flag" points="14,20 40,25 25,48" fill="#ff6b35"/>
+                <circle class="flag" cx="66" cy="52" r="10" fill="#f8a5d1"/>
+                <polygon class="flag" points="100,56 126,58 113,82" fill="#5a4ff3"/>
+                <polygon class="flag" points="157,60 170,67 166,82 150,83 146,68" fill="#1fab54"/>
+                <circle class="flag" cx="204" cy="48" r="10" fill="#ffb800"/>
+                <polygon class="flag" points="232,26 256,20 247,46" fill="#14bf96"/>
+            </g>
+        </svg>
+
         <div class="hero-inner">
+            <img class="deco deco-avatar deco-teacher" src="/static/img/avatar-teacher.jpg" alt="" width="84" height="84">
+            <svg class="deco deco-desk" viewBox="0 0 90 90" aria-hidden="true">
+                <rect x="20" y="4" width="22" height="9" rx="2" fill="#ff6b35"/>
+                <rect x="2" y="13" width="86" height="12" rx="2" fill="#ffb800"/>
+                <rect x="6" y="25" width="78" height="30" fill="#ffc933"/>
+                <rect x="6" y="55" width="7" height="33" fill="#ffb800"/>
+                <rect x="77" y="55" width="7" height="33" fill="#ffb800"/>
+                <rect x="34" y="34" width="26" height="22" rx="4" fill="#ff6b35"/>
+                <rect x="38" y="56" width="4" height="30" fill="#c24a1e"/>
+                <rect x="52" y="56" width="4" height="30" fill="#c24a1e"/>
+                <rect x="34" y="60" width="26" height="5" rx="2" fill="#e05a26"/>
+            </svg>
+            <svg class="deco deco-mascot" viewBox="0 0 80 80" aria-hidden="true">
+                <path d="M40 4 Q44 4 47.5 6 L70 19 Q74 21.5 74 26 L74 54 Q74 58.5 70 61 L47.5 74 Q44 76 40 76 Q36 76 32.5 74 L10 61 Q6 58.5 6 54 L6 26 Q6 21.5 10 19 L32.5 6 Q36 4 40 4z" fill="#5a4ff3"/>
+                <ellipse class="eye" cx="30" cy="35" rx="7" ry="8" fill="#fff"/>
+                <ellipse class="eye" cx="50" cy="35" rx="7" ry="8" fill="#fff"/>
+                <circle cx="31.5" cy="36.5" r="3.4" fill="#21242c"/>
+                <circle cx="51.5" cy="36.5" r="3.4" fill="#21242c"/>
+                <path d="M31 50 Q40 58 49 50" fill="none" stroke="#21242c" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <img class="deco deco-avatar deco-student" src="/static/img/avatar-student.jpg" alt="" width="84" height="84">
+            <span class="deco deco-dot d1"></span>
+            <span class="deco deco-dot d2"></span>
+            <span class="deco deco-dot d3"></span>
+
             <div class="hero-copy">
-                <h1>Unlock your talents.<br><span class="gradient-text">Learn anything.</span></h1>
-                <p class="hero-lead">Learn with short videos and real practice, and see how far you've come. Coding, design, maths or languages — it's all here.</p>
+                <h1>Talents Unlocked—always free,<br>learn <span class="squiggle">anything<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 C 30 2, 50 2, 70 11 S 110 20, 135 9 S 180 3, 196 10"/></svg></span></h1>
+                <p class="hero-lead">Short video lessons, real practice and progress you can see. Coding, design, maths or languages — learn at your own pace, for free.</p>
                 <form class="hero-search" id="course-search-form" role="search">
                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M21 21l-4.35-4.35"/></svg>
                     <label class="sr-only" for="course-search">Search courses</label>
                     <input id="course-search" type="search" placeholder="What do you want to learn?" maxlength="60" autocomplete="off">
                     <button class="btn btn-primary" id="course-search-button" type="submit">Search</button>
                 </form>
+                <p class="hero-note" data-auth-show="guest">New here? <a href="/signup">Sign up free</a> — it takes less than a minute.</p>
+            </div>
+
+            <div class="hero-stats-wrap">
+                <p class="eyebrow">Learning in numbers</p>
                 <ul class="hero-stats">
                     <li><strong data-stat="courses">9</strong><span>courses</span></li>
                     <li><strong data-stat="lessons">200+</strong><span>lessons</span></li>
                     <li><strong data-stat="rating">4.7★</strong><span>average rating</span></li>
+                    <li><strong>100%</strong><span>free forever</span></li>
                 </ul>
-            </div>
-            <div class="hero-visual">
-                <img src="/static/img/hero.jpg" alt="A student learning online with a laptop" width="1200" height="896">
             </div>
         </div>
     </section>
 
-    <section class="section" id="courses" aria-labelledby="courses-title">
+    <section class="section how" id="why" aria-labelledby="why-title">
+        <div class="section-head center">
+            <p class="eyebrow">How it works</p>
+            <h2 id="why-title">Learning that fits around your day</h2>
+            <p class="section-sub">Short lessons, a bit of practice, and you always know what’s next.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="How Talents Unlocked works">
+            <button class="tab" id="tab-watch" role="tab" aria-selected="true" aria-controls="panel-watch" type="button">Watch</button>
+            <button class="tab" id="tab-practice" role="tab" aria-selected="false" aria-controls="panel-practice" tabindex="-1" type="button">Practice</button>
+            <button class="tab" id="tab-track" role="tab" aria-selected="false" aria-controls="panel-track" tabindex="-1" type="button">Track</button>
+        </div>
+
+        <div class="tab-panel" id="panel-watch" role="tabpanel" aria-labelledby="tab-watch">
+            <div>
+                <h3>Learn at your own pace</h3>
+                <p>Lessons are 5–10 minutes long. Pause, rewind and come back whenever it suits you.</p>
+                <ul class="check-list">
+                    <li>Bite-sized videos from real practitioners</li>
+                    <li>Works on laptop, tablet and phone</li>
+                    <li>Pick up exactly where you left off</li>
+                </ul>
+                <a class="btn btn-primary" href="/#courses">Browse courses</a>
+            </div>
+            <div class="panel-visual">
+                <img src="/static/img/hero.jpg" alt="A student learning online with a laptop" width="1200" height="896" loading="lazy">
+                <span class="play-badge"><i></i>Lesson 3 · 7 min</span>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="panel-practice" role="tabpanel" aria-labelledby="tab-practice" hidden>
+            <div>
+                <h3>Practice as you go</h3>
+                <p>Quizzes and mini-projects after every module help new skills actually stick.</p>
+                <ul class="check-list">
+                    <li>Instant feedback on every answer</li>
+                    <li>Hands-on projects you can show off</li>
+                    <li>Hints when you get stuck</li>
+                </ul>
+                <a class="btn btn-primary" href="/signup" data-auth-show="guest">Start practising</a>
+            </div>
+            <div class="mock-card">
+                <p class="mock-label">Quick check · Python basics</p>
+                <p class="mock-q">What does <code>len("talent")</code> return?</p>
+                <ul class="mock-options">
+                    <li><b>A</b>5</li>
+                    <li class="correct"><b>B</b>6</li>
+                    <li><b>C</b>"talent"</li>
+                </ul>
+                <p class="mock-feedback">Nice work! +10 skill points</p>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="panel-track" role="tabpanel" aria-labelledby="tab-track" hidden>
+            <div>
+                <h3>See how far you’ve come</h3>
+                <p>Your personal dashboard keeps your account and learning in one simple space.</p>
+                <ul class="check-list">
+                    <li>Progress for every course at a glance</li>
+                    <li>Daily streaks to keep you motivated</li>
+                    <li>Clear next step, always</li>
+                </ul>
+                <a class="btn btn-primary" href="/signup" data-auth-show="guest">Create my dashboard</a>
+            </div>
+            <div class="mock-card">
+                <p class="mock-label">Your progress</p>
+                <div class="progress-row">
+                    <div class="progress-head"><span>Web Development</span><span>72%</span></div>
+                    <div class="progress-bar"><i style="--p:72%"></i></div>
+                </div>
+                <div class="progress-row">
+                    <div class="progress-head"><span>UI/UX Design</span><span>45%</span></div>
+                    <div class="progress-bar"><i style="--p:45%; --c:#ff6b35"></i></div>
+                </div>
+                <div class="progress-row">
+                    <div class="progress-head"><span>Statistics</span><span>88%</span></div>
+                    <div class="progress-bar"><i style="--p:88%; --c:#1fab54"></i></div>
+                </div>
+                <div class="streak"><strong>🔥 12</strong><span>day learning streak — keep it going!</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section courses-section" id="courses" aria-labelledby="courses-title">
         <div class="section-head">
             <div>
-                <p class="eyebrow left">EXPLORE THE CATALOG</p>
+                <p class="eyebrow left">Explore</p>
                 <h2 id="courses-title">Preview our courses</h2>
-                <p class="section-sub">Pick a topic and see what you'll learn. Every course comes with a free preview.</p>
+                <p class="section-sub">Click any course to see what’s inside before you sign up.</p>
             </div>
             <p class="result-count" id="course-count" aria-live="polite"></p>
         </div>
@@ -40,39 +174,24 @@
         <p class="empty-state" id="course-empty" hidden>No courses match your search. Try another keyword or category.</p>
     </section>
 
-    <section class="section why" id="why" aria-labelledby="why-title">
-        <div class="why-head">
-            <p class="eyebrow">WHY TALENTS UNLOCKED</p>
-            <h2 id="why-title">Learning that fits your life</h2>
-            <p class="section-sub">Short lessons, real practice and a clear path forward — so you always know what to learn next.</p>
-        </div>
-        <div class="feature-grid">
-            <article class="feature">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 6v6l4 2"/></svg></span>
-                <h3>Learn at your own pace</h3>
-                <p>Lessons are 5–10 minutes long. Pause, rewind and come back whenever it suits you.</p>
-            </article>
-            <article class="feature">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
-                <h3>Practice as you go</h3>
-                <p>Quizzes and mini-projects after every module help new skills actually stick.</p>
-            </article>
-            <article class="feature">
-                <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-                <h3>Everything in one place</h3>
-                <p>Your personal dashboard keeps your account and learning in one simple space.</p>
-            </article>
+    <section class="quote-section" aria-label="What learners say">
+        <div class="quote-inner">
+            <blockquote>I finally understood Python after years of trying. Ten minutes a day was all it took — and it never felt like homework.</blockquote>
+            <div class="quote-author">
+                <img src="/static/img/avatar-student.jpg" alt="" width="52" height="52" loading="lazy">
+                <div><strong>Daniel K.</strong><span>Student, 16</span></div>
+            </div>
         </div>
     </section>
 
     <div class="cta-wrap">
         <section class="cta-band" aria-labelledby="cta-title">
             <div>
-                <h2 id="cta-title">Ready to unlock your next skill?</h2>
-                <p>Create a free account in less than a minute.</p>
+                <h2 id="cta-title">Got 10 minutes? Start today.</h2>
+                <p>Making an account is free and takes less than a minute.</p>
             </div>
             <div class="cta-actions">
-                <a class="btn btn-light btn-lg" href="/signup" data-auth-show="guest">Join for free</a>
+                <a class="btn btn-light btn-lg" href="/signup" data-auth-show="guest">Sign up free</a>
                 <a class="btn btn-outline-light btn-lg" href="/login" data-auth-show="guest">Log in</a>
                 <a class="btn btn-light btn-lg" href="/dashboard" data-auth-show="user">Go to my dashboard</a>
             </div>
@@ -103,6 +222,6 @@
 </dialog>
 {% endblock %}
 {% block scripts %}
-<script src="/static/courses.js?v=5"></script>
-<script src="/static/home.js?v=5"></script>
+<script src="/static/courses.js?v=6"></script>
+<script src="/static/home.js?v=6"></script>
 {% endblock %}
