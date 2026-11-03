@@ -8,20 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-    <link rel="stylesheet" href="/style.css?v=7">
+    <link rel="stylesheet" href="/style.css?v=8">
 </head>
 <body class="auth-page" data-page="login" data-auth="guest">
     <header class="site-nav">
         <div class="nav-inner">
             <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
-            <nav class="nav-links" aria-label="Main">
+            <nav class="nav-links" id="site-menu" aria-label="Main">
                 <a href="/#courses">Courses</a>
                 <a href="/#why">How it works</a>
+                <a href="/#mission">Mission</a>
+                <a href="/#team">Team</a>
             </nav>
             <div class="nav-actions">
                 <a class="btn btn-ghost btn-sm" href="/login.html" data-auth-show="guest">Log in</a>
                 <a class="btn btn-primary btn-sm" href="/signup.html" data-auth-show="guest">Sign up</a>
                 <a class="btn btn-primary btn-sm" href="/dashboard.html" data-auth-show="user">My dashboard</a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span></button>
             </div>
         </div>
     </header>
@@ -51,10 +54,16 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/#courses">Courses</a>
+                <a href="/#mission">Mission</a>
+                <a href="/#team">Team</a>
+            </nav>
             <span>Learn anything, at your own pace.</span>
         </div>
     </footer>
 
     <script src="/app.js?v=5"></script>
+    <script src="/nav.js?v=1"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-    <link rel="stylesheet" href="/static/style.css?v=7">
+    <link rel="stylesheet" href="/static/style.css?v=8">
 </head>
 <body class="{% block body_class %}auth-page{% endblock %}" data-auth="{{ 'user' if logged_in else 'guest' }}">
     {% include "_nav.html" %}
@@ -26,9 +26,15 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/#courses">Courses</a>
+                <a href="/#mission">Mission</a>
+                <a href="/#team">Team</a>
+            </nav>
             <span>Learn anything, at your own pace.</span>
         </div>
     </footer>
+    <script src="/static/nav.js?v=1"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

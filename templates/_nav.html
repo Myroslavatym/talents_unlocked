@@ -1,14 +1,17 @@
 <header class="site-nav">
     <div class="nav-inner">
         <a class="brand" href="/">Talents Unlocked<span class="brand-dot">.</span></a>
-        <nav class="nav-links" aria-label="Main">
+        <nav class="nav-links" id="site-menu" aria-label="Main">
             <a href="/#courses">Courses</a>
             <a href="/#why">How it works</a>
+            <a href="/#mission">Mission</a>
+            <a href="/#team">Team</a>
         </nav>
         <div class="nav-actions">
             <a class="btn btn-ghost btn-sm" href="/login" data-auth-show="guest">Log in</a>
             <a class="btn btn-primary btn-sm" href="/signup" data-auth-show="guest">Sign up</a>
             <a class="btn btn-primary btn-sm" href="/dashboard" data-auth-show="user">My dashboard</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span></button>
         </div>
     </div>
 </header>

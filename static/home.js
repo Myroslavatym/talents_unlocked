@@ -197,6 +197,17 @@
         });
     }
 
+    // Popular topic shortcuts under the hero search
+    document.querySelectorAll('.hero-topics .topic').forEach((button) => {
+        button.addEventListener('click', () => {
+            if (!searchInput) return;
+            searchInput.value = button.dataset.query || '';
+            state.query = searchInput.value.trim().toLowerCase();
+            renderCourses();
+            document.getElementById('courses').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
     const lessonsTotal = courses.reduce((sum, c) => sum + c.lessons, 0);
     const statCourses = document.querySelector('[data-stat="courses"]');
     const statLessons = document.querySelector('[data-stat="lessons"]');

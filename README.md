@@ -19,6 +19,8 @@ The forgot-password page validates the email and checks whether an account exist
 
 `main.py` contains routes and validation, `database.py` manages SQLite, `templates/` contains the pages, and `static/style.css` contains styling. `base.html` shares the layout across pages.
 
+Colors, fonts, layout rules and the list of UI features are documented in [docs/design-system.md](docs/design-system.md).
+
 ## Deploy to Netlify
 
 This project is configured to deploy directly to Netlify as a high-speed web application.
